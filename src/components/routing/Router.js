@@ -6,6 +6,7 @@ import OptimizedListRenderingComponent from "../WITHAUTH/OptimizedListRenderingC
 import SequentialAPIFetchnew from "../childComponents/SequentialAPIFetch";
 import UsingUseFetch from "../childComponents/UsingUseFetch";
 import InfiniteScroll from "../childComponents/InfiniteScroll";
+import VirtualizedList from "../virtualizedlibraryComponent";
 
 function RouterComponenent() {
   return (
@@ -14,6 +15,7 @@ function RouterComponenent() {
         <Route path="/login" element={<Login />} />
         <Route index element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/virtualized-library-component" element={<VirtualizedList />} />
         <Route path="/infinite-scroll" element={<InfiniteScroll />} />
         <Route
           path="/optimized-list"
