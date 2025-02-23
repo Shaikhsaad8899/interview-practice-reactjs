@@ -24,3 +24,24 @@ Parent2.prototype.information = function () {
 const child2 = new Parent2("Saad Shaikh",24)
 
 console.log(child2.information());
+
+
+const animalPrototype = {
+    speak() {
+      console.log(`${this.name} makes a noise.`);
+    }
+  };
+  
+  const dogPrototype = {
+    speak() {
+      console.log(`${this.name} barks.`);
+    }
+  };
+  
+  // Set the prototype of dogPrototype to animalPrototype
+  dogPrototype.__proto__ = animalPrototype;
+  
+  const dog = { name: "Buddy", __proto__: dogPrototype };
+  
+  dog.speak(); // Output: Buddy barks.
+  
