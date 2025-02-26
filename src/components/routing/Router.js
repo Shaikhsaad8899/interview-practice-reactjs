@@ -7,6 +7,8 @@ import SequentialAPIFetchnew from "../childComponents/SequentialAPIFetch";
 import UsingUseFetch from "../childComponents/UsingUseFetch";
 import InfiniteScroll from "../childComponents/InfiniteScroll";
 import VirtualizedList from "../virtualizedlibraryComponent";
+import FetchUsersAndPosts from "../childComponents/SequentialAPIFetch";
+import ProfilerComponent from "../childComponents/profilerComponent";
 
 function RouterComponenent() {
   return (
@@ -22,7 +24,9 @@ function RouterComponenent() {
           element={<OptimizedListRenderingComponent />}
         />
         <Route path="/customhookfetch" element={<UsingUseFetch />} />
-        <Route path="/sequentialAPicall" element={<SequentialAPIFetchnew />} />
+        <Route path="/sequentialAPicall" element={<FetchUsersAndPosts />} />
+        <Route path="/sequentialAPicallnew" element={<SequentialAPIFetchnew />} />
+        <Route path="/profiler-component" element={<ProfilerComponent />} />
       </Routes>
     </Router>
   );
